@@ -1,0 +1,51 @@
+:root{
+
+/***************************
+COLORES
+****************************/
+
+--bg:#FDF8F4;
+
+--bg2:#F8F1EB;
+
+--white:#FFFFFF;
+
+--gold:#C8A96A;
+
+--gold-dark:#A98846;
+
+--gold-light:#E9D4A3;
+
+--pink:#F3D8DF;
+
+--rose:#EABFCB;
+
+--text:#555555;
+
+--text-light:#888888;
+
+--shadow:0 15px 35px rgba(0,0,0,.10);
+
+--shadow-hover:0 25px 60px rgba(0,0,0,.18);
+
+--radius:26px;
+
+/***************************
+TIPOGRAFÍAS
+****************************/
+
+--font-title:"Cormorant Garamond",serif;
+
+--font-name:"Allura",cursive;
+
+--font-text:"Libre Baskerville",serif;
+
+/***************************
+TRANSICIONES
+****************************/
+
+--transition:.45s;
+
+--transitionSlow:1s;
+
+}

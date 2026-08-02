@@ -1,0 +1,634 @@
+/*==================================================
+                SECTIONS.CSS
+===================================================*/
+
+/*************************************************
+DECORACIÓN GENERAL
+*************************************************/
+
+.screen{
+
+    overflow:hidden;
+
+}
+
+.screen::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:170px;
+
+    height:170px;
+
+    background:url("../assets/img/flores/esquina-superior-izq.png")
+    no-repeat center;
+
+    background-size:contain;
+
+    opacity:.95;
+
+    pointer-events:none;
+
+    z-index:2;
+
+}
+
+.screen::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:0;
+
+    bottom:0;
+
+    width:170px;
+
+    height:170px;
+
+    background:url("../assets/img/flores/esquina-inferior-der.png")
+    no-repeat center;
+
+    background-size:contain;
+
+    opacity:.95;
+
+    pointer-events:none;
+
+    z-index:2;
+
+}
+
+/*************************************************
+FONDO ACUARELA
+*************************************************/
+
+.section-background{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at top left,
+    rgba(255,255,255,.9),
+    transparent 40%),
+
+    radial-gradient(circle at bottom right,
+    rgba(244,227,212,.60),
+    transparent 35%),
+
+    linear-gradient(
+    180deg,
+    #FFFDFB,
+    #F7EFE8);
+
+}
+
+/*************************************************
+CONTENEDOR
+*************************************************/
+
+.container{
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+/*************************************************
+MARCO DORADO
+*************************************************/
+
+.container::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-18px;
+
+    border:1px solid rgba(200,169,106,.35);
+
+    border-radius:35px;
+
+    pointer-events:none;
+
+}
+
+/*************************************************
+SEPARADOR
+*************************************************/
+
+.section-title::after{
+
+    content:"";
+
+    display:block;
+
+    width:90px;
+
+    height:2px;
+
+    margin:18px auto 0;
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    transparent,
+
+    var(--gold),
+
+    transparent);
+
+}
+
+/*************************************************
+ICONOS
+*************************************************/
+
+.icon-circle{
+
+    position:relative;
+
+}
+
+.icon-circle::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-8px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(200,169,106,.20);
+
+}
+
+/*************************************************
+TARJETAS
+*************************************************/
+
+.info-card{
+
+    border:1px solid rgba(200,169,106,.12);
+
+}
+
+.parents-card{
+
+    border:1px solid rgba(200,169,106,.12);
+
+}
+
+.location-card{
+
+    border:1px solid rgba(200,169,106,.12);
+
+}
+
+.confirmation-card{
+
+    border:1px solid rgba(200,169,106,.12);
+
+}
+
+.dress-card{
+
+    border:1px solid rgba(200,169,106,.12);
+
+}
+
+/*************************************************
+SOMBRAS
+*************************************************/
+
+.info-card,
+
+.parents-card,
+
+.location-card,
+
+.confirmation-card,
+
+.dress-card{
+
+    box-shadow:
+
+    0 25px 45px rgba(0,0,0,.08);
+
+}
+
+/*************************************************
+TÍTULOS
+*************************************************/
+
+.section-title{
+
+    position:relative;
+
+}
+
+.section-subtitle{
+
+    font-weight:600;
+
+}
+
+/*==================================================
+        FLORES DECORATIVAS
+==================================================*/
+
+.screen .flower-top-left{
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:180px;
+
+    z-index:2;
+
+    pointer-events:none;
+
+    user-select:none;
+
+}
+
+.screen .flower-top-right{
+
+    position:absolute;
+
+    top:0;
+
+    right:0;
+
+    width:180px;
+
+    z-index:2;
+
+    pointer-events:none;
+
+    user-select:none;
+
+}
+
+.screen .flower-bottom-left{
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:180px;
+
+    z-index:2;
+
+    pointer-events:none;
+
+    user-select:none;
+
+}
+
+.screen .flower-bottom-right{
+
+    position:absolute;
+
+    right:0;
+
+    bottom:0;
+
+    width:180px;
+
+    z-index:2;
+
+    pointer-events:none;
+
+    user-select:none;
+
+}
+/*************************************************
+EFECTO CRISTAL
+*************************************************/
+
+.glass{
+
+    background:rgba(255,255,255,.72);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.45);
+
+    box-shadow:
+
+    0 18px 45px rgba(0,0,0,.10);
+
+}
+
+/*************************************************
+MARCO PREMIUM
+*************************************************/
+
+.premium-frame{
+
+    position:relative;
+
+    border-radius:35px;
+
+    overflow:hidden;
+
+}
+
+.premium-frame::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:10px;
+
+    border:1px solid rgba(200,169,106,.35);
+
+    border-radius:28px;
+
+    pointer-events:none;
+
+}
+
+.premium-frame::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        rgba(255,255,255,.15),
+
+        transparent,
+
+        rgba(255,255,255,.10)
+
+    );
+
+    pointer-events:none;
+
+}
+/*==========================================
+            INFO GRID
+==========================================*/
+
+.info-grid{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+
+    margin-top:35px;
+}
+/*************************************************
+DRESS CODE
+*************************************************/
+
+.dress-grid{
+
+    margin-top:50px;
+
+}
+
+.dress-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.dress-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-60px;
+
+    right:-60px;
+
+    width:140px;
+
+    height:140px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+        rgba(255,236,195,.60),
+
+        transparent
+
+    );
+
+}
+
+.dress-image{
+
+    transition:.45s;
+
+}
+
+.dress-card:hover .dress-image{
+
+    transform:
+
+    scale(1.06)
+
+    translateY(-6px);
+
+}
+
+.dress-color{
+
+    box-shadow:
+
+    0 10px 25px rgba(200,169,106,.18);
+
+}
+
+/*************************************************
+PALETA
+*************************************************/
+
+.color{
+
+    border:4px solid white;
+
+}
+
+.color:hover{
+
+    box-shadow:
+
+    0 12px 25px rgba(0,0,0,.12);
+
+}
+
+/*************************************************
+GALERÍA
+*************************************************/
+
+.gallery-slider{
+
+    background:white;
+
+    padding:8px;
+
+}
+
+.gallery-item{
+
+    border-radius:22px;
+
+}
+
+.gallery-item:hover{
+
+    filter:
+
+    brightness(1.06)
+
+    contrast(1.03);
+
+}
+
+.gallery-dots{
+
+    margin-top:28px;
+
+}
+
+.dot{
+
+    cursor:pointer;
+
+}
+
+/*************************************************
+LIGHTBOX
+*************************************************/
+
+#lightbox{
+
+    backdrop-filter:blur(10px);
+
+}
+
+#lightbox img{
+
+    border:8px solid white;
+
+    box-shadow:
+
+    0 30px 70px rgba(0,0,0,.35);
+
+}
+
+#prevPhoto,
+
+#nextPhoto{
+
+    transition:.35s;
+
+}
+
+#prevPhoto:hover,
+
+#nextPhoto:hover{
+
+    transform:scale(1.10);
+
+    background:white;
+
+    color:var(--gold);
+
+}
+
+#closeLightbox{
+
+    transition:.35s;
+
+}
+
+#closeLightbox:hover{
+
+    transform:rotate(90deg);
+
+}
+
+/*************************************************
+SEPARADOR FLORAL
+*************************************************/
+
+.section-divider{
+
+    width:160px;
+
+    margin:60px auto;
+
+    opacity:.75;
+
+}
+
+.section-divider img{
+
+    width:100%;
+
+}
+
+/*************************************************
+ORNAMENTO
+*************************************************/
+
+.ornament{
+
+    width:90px;
+
+    margin:0 auto 20px;
+
+    opacity:.85;
+
+}
+
+.ornament img{
+
+    width:100%;
+
+}

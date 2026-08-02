@@ -1,0 +1,748 @@
+/*==================================================
+                PREMIUM.CSS
+==================================================*/
+
+/****************************************
+LUZ DORADA GLOBAL
+****************************************/
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:1;
+
+    background:
+
+    radial-gradient(circle at 15% 20%,
+    rgba(255,235,180,.18),
+    transparent 25%),
+
+    radial-gradient(circle at 85% 15%,
+    rgba(255,240,210,.12),
+    transparent 20%),
+
+    radial-gradient(circle at 50% 85%,
+    rgba(255,230,180,.15),
+    transparent 30%);
+
+}
+
+/****************************************
+AURORA
+****************************************/
+
+body::before{
+
+    animation:
+
+    aurora 25s linear infinite alternate;
+
+}
+
+@keyframes aurora{
+
+    0%{
+
+        transform:
+        scale(1)
+        translate(0,0);
+
+    }
+
+    50%{
+
+        transform:
+        scale(1.08)
+        translate(-20px,-15px);
+
+    }
+
+    100%{
+
+        transform:
+        scale(1)
+        translate(20px,15px);
+
+    }
+
+}
+
+/****************************************
+BRILLO DE TARJETAS
+****************************************/
+
+.info-card,
+
+.parents-card,
+
+.location-card,
+
+.confirmation-card,
+
+.dress-card{
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.info-card::after,
+
+.parents-card::after,
+
+.location-card::after,
+
+.confirmation-card::after,
+
+.dress-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120%;
+
+    left:-60%;
+
+    width:45%;
+
+    height:300%;
+
+    transform:rotate(25deg);
+
+    background:
+
+    linear-gradient(
+
+        transparent,
+
+        rgba(255,255,255,.70),
+
+        transparent
+
+    );
+
+    opacity:0;
+
+}
+
+.info-card:hover::after,
+
+.parents-card:hover::after,
+
+.location-card:hover::after,
+
+.confirmation-card:hover::after,
+
+.dress-card:hover::after{
+
+    opacity:1;
+
+    animation:
+
+    luxuryReflection
+
+    1.8s ease;
+
+}
+
+@keyframes luxuryReflection{
+
+    from{
+
+        left:-60%;
+
+    }
+
+    to{
+
+        left:170%;
+
+    }
+
+}
+
+/****************************************
+MARCO DORADO
+****************************************/
+
+.hero-frame{
+
+    border:1px solid
+
+    rgba(210,180,90,.35);
+
+}
+
+.hero-frame::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:35px;
+
+    box-shadow:
+
+    inset 0 0 0 1px rgba(255,255,255,.35),
+
+    inset 0 0 35px rgba(255,255,255,.18);
+
+    pointer-events:none;
+
+}
+
+/****************************************
+TÍTULOS
+****************************************/
+
+.section-title{
+
+    text-shadow:
+
+    0 2px 0 white,
+
+    0 8px 25px rgba(200,169,106,.15);
+
+}
+
+.hero-name{
+
+    text-shadow:
+
+    0 2px 0 white,
+
+    0 8px 25px rgba(194,142,163,.35);
+
+}
+
+/****************************************
+BOTÓN DORADO
+****************************************/
+
+.gold-button{
+
+    position:relative;
+
+}
+
+.gold-button::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:2px;
+
+    border-radius:40px;
+
+    border:1px solid
+
+    rgba(255,255,255,.30);
+
+    pointer-events:none;
+
+}
+
+/****************************************
+FONDO PREMIUM
+****************************************/
+
+.section-background{
+
+    overflow:hidden;
+
+}
+
+.section-background::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    left:-250px;
+
+    top:-250px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+        rgba(255,245,220,.25),
+
+        transparent
+
+    );
+
+}
+
+.section-background::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:400px;
+
+    height:400px;
+
+    right:-180px;
+
+    bottom:-180px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+        rgba(245,225,190,.18),
+
+        transparent
+
+    );
+
+}
+/*==================================================
+        PARTÍCULAS PREMIUM
+==================================================*/
+
+.lux-particle{
+
+    position:fixed;
+
+    width:4px;
+
+    height:4px;
+
+    border-radius:50%;
+
+    background:#FFE6A8;
+
+    box-shadow:
+
+        0 0 8px #FFE6A8,
+
+        0 0 16px #FFF4CC,
+
+        0 0 28px rgba(255,240,190,.75);
+
+    pointer-events:none;
+
+    z-index:2;
+
+    animation:
+
+        luxuryFloat linear infinite;
+
+}
+
+@keyframes luxuryFloat{
+
+    0%{
+
+        transform:
+
+            translateY(100vh)
+
+            translateX(0)
+
+            scale(.4);
+
+        opacity:0;
+
+    }
+
+    10%{
+
+        opacity:.9;
+
+    }
+
+    50%{
+
+        transform:
+
+            translateY(40vh)
+
+            translateX(30px)
+
+            scale(1);
+
+    }
+
+    100%{
+
+        transform:
+
+            translateY(-20vh)
+
+            translateX(-20px)
+
+            scale(.2);
+
+        opacity:0;
+
+    }
+
+}
+
+/****************************************
+BOKEH
+****************************************/
+
+.bokeh{
+
+    position:fixed;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.18);
+
+    filter:blur(10px);
+
+    animation:
+
+        bokehMove 16s linear infinite;
+
+}
+
+@keyframes bokehMove{
+
+    from{
+
+        transform:
+
+            translateY(120vh)
+
+            scale(.5);
+
+    }
+
+    to{
+
+        transform:
+
+            translateY(-30vh)
+
+            scale(1.4);
+
+    }
+
+}
+
+/****************************************
+DESTELLOS
+****************************************/
+
+.star{
+
+    position:fixed;
+
+    width:12px;
+
+    height:12px;
+
+    pointer-events:none;
+
+    z-index:3;
+
+}
+
+.star::before,
+
+.star::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    background:#FFF5D8;
+
+}
+
+.star::before{
+
+    width:2px;
+
+    height:12px;
+
+}
+
+.star::after{
+
+    width:12px;
+
+    height:2px;
+
+}
+
+.star{
+
+    animation:
+
+        twinkle 2.5s ease-in-out infinite;
+
+}
+
+@keyframes twinkle{
+
+    0%{
+
+        opacity:0;
+
+        transform:scale(.3);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.2);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:scale(.3);
+
+    }
+
+}
+
+/****************************************
+EFECTO CRISTAL
+****************************************/
+
+.glass{
+
+    background:rgba(255,255,255,.72);
+
+    backdrop-filter:blur(22px);
+
+    -webkit-backdrop-filter:blur(22px);
+
+    border:1px solid rgba(255,255,255,.45);
+
+}
+
+/****************************************
+PROFUNDIDAD
+****************************************/
+
+.hero-frame,
+
+.info-card,
+
+.parents-card,
+
+.location-card,
+
+.confirmation-card,
+
+.dress-card{
+
+    transform-style:preserve-3d;
+
+}
+
+/****************************************
+HOVER PREMIUM
+****************************************/
+
+.hero-frame:hover,
+
+.info-card:hover,
+
+.parents-card:hover,
+
+.location-card:hover,
+
+.confirmation-card:hover,
+
+.dress-card:hover{
+
+    transform:
+
+        perspective(1000px)
+
+        rotateX(2deg)
+
+        rotateY(-2deg)
+
+        translateY(-8px);
+
+}
+
+/****************************************
+FLORES
+****************************************/
+
+.hero-decoration img,
+
+.footer-decoration img{
+
+    filter:
+
+        drop-shadow(0 15px 20px rgba(0,0,0,.15));
+
+}
+
+/****************************************
+VIRGEN
+****************************************/
+
+.virgen{
+
+    filter:
+
+        drop-shadow(0 20px 25px rgba(0,0,0,.15))
+
+        drop-shadow(0 0 40px rgba(255,240,180,.30));
+
+}
+
+/****************************************
+GALERÍA
+****************************************/
+
+.gallery-item{
+
+    transition:
+
+        transform .45s,
+
+        filter .45s,
+
+        box-shadow .45s;
+
+}
+
+.gallery-item:hover{
+
+    box-shadow:
+
+        0 20px 50px rgba(0,0,0,.25);
+
+}
+
+/****************************************
+BOTÓN DORADO
+****************************************/
+
+.gold-button{
+
+    background-size:200% 200%;
+
+    animation:
+
+        goldFlow 6s linear infinite;
+
+}
+
+@keyframes goldFlow{
+
+    0%{
+
+        background-position:0% 50%;
+
+    }
+
+    50%{
+
+        background-position:100% 50%;
+
+    }
+
+    100%{
+
+        background-position:0% 50%;
+
+    }
+
+}
+
+/****************************************
+SCROLLBAR PREMIUM
+****************************************/
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    border-radius:20px;
+
+    background:
+
+        linear-gradient(
+
+            #E2C47C,
+
+            #C89C4E
+
+        );
+
+}
+
+/****************************************
+SEPARADOR
+****************************************/
+
+.section-divider{
+
+    opacity:.9;
+
+    filter:
+
+        drop-shadow(
+
+            0 10px 12px
+
+            rgba(0,0,0,.08)
+
+        );
+
+}
+
+/****************************************
+FINAL
+****************************************/
+
+body{
+
+    text-rendering:optimizeLegibility;
+
+    -webkit-font-smoothing:antialiased;
+
+    -moz-osx-font-smoothing:grayscale;
+
+}

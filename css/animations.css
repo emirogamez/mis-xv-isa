@@ -1,0 +1,1251 @@
+/*==================================================
+                ANIMATIONS.CSS
+===================================================*/
+
+/****************************************
+FADE IN
+****************************************/
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/****************************************
+FADE UP
+****************************************/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(70px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/****************************************
+FADE DOWN
+****************************************/
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-70px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/****************************************
+ZOOM
+****************************************/
+
+@keyframes zoomIn{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.85);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+/****************************************
+ZOOM SUAVE
+****************************************/
+
+@keyframes slowZoom{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.05);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/****************************************
+RESPIRACIÓN
+****************************************/
+
+@keyframes breathing{
+
+    0%{
+
+        transform:translateY(0) scale(1);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px) scale(1.03);
+
+    }
+
+    100%{
+
+        transform:translateY(0) scale(1);
+
+    }
+
+}
+
+/****************************************
+LATIDO
+****************************************/
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.06);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/****************************************
+GIRAR
+****************************************/
+
+@keyframes rotateMusic{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/****************************************
+LOADER
+****************************************/
+
+@keyframes spin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/****************************************
+FLOTAR
+****************************************/
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/****************************************
+BRILLO
+****************************************/
+
+@keyframes glow{
+
+    0%{
+
+        box-shadow:0 0 0 rgba(255,220,170,.20);
+
+    }
+
+    50%{
+
+        box-shadow:
+
+        0 0 40px rgba(255,220,170,.75),
+
+        0 0 90px rgba(255,240,210,.45);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 0 rgba(255,220,170,.20);
+
+    }
+
+}
+
+/***************************************************
+DESTELLOS
+****************************************************/
+
+@keyframes sparkle{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+
+        scale(.2)
+
+        rotate(0deg);
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:
+
+        scale(1.25)
+
+        rotate(180deg);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+
+        scale(.1)
+
+        rotate(360deg);
+
+    }
+
+}
+
+/***************************************************
+CAÍDA PÉTALOS
+****************************************************/
+
+@keyframes petalFall{
+
+    0%{
+
+        transform:
+
+        translateY(-120px)
+
+        translateX(0)
+
+        rotate(0deg);
+
+        opacity:0;
+
+    }
+
+    10%{
+
+        opacity:1;
+
+    }
+
+    30%{
+
+        transform:
+
+        translateY(25vh)
+
+        translateX(18px)
+
+        rotate(80deg);
+
+    }
+
+    60%{
+
+        transform:
+
+        translateY(60vh)
+
+        translateX(-18px)
+
+        rotate(180deg);
+
+    }
+
+    100%{
+
+        transform:
+
+        translateY(110vh)
+
+        translateX(30px)
+
+        rotate(360deg);
+
+        opacity:0;
+
+    }
+
+}
+
+/***************************************************
+HOJAS
+****************************************************/
+
+@keyframes leaf{
+
+    0%{
+
+        transform:
+        rotate(0deg);
+
+    }
+
+    25%{
+
+        transform:
+        rotate(3deg);
+
+    }
+
+    50%{
+
+        transform:
+        rotate(0deg);
+
+    }
+
+    75%{
+
+        transform:
+        rotate(-3deg);
+
+    }
+
+    100%{
+
+        transform:
+        rotate(0deg);
+
+    }
+
+}
+
+/***************************************************
+CARTA
+****************************************************/
+
+@keyframes letterUp{
+
+    from{
+
+        transform:
+
+        translateY(180px);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:
+
+        translateY(0);
+
+        opacity:1;
+
+    }
+
+}
+
+/***************************************************
+SOBRE
+****************************************************/
+
+@keyframes envelopeShake{
+
+    0%{
+
+        transform:translateX(0);
+
+    }
+
+    20%{
+
+        transform:translateX(-4px);
+
+    }
+
+    40%{
+
+        transform:translateX(4px);
+
+    }
+
+    60%{
+
+        transform:translateX(-3px);
+
+    }
+
+    80%{
+
+        transform:translateX(3px);
+
+    }
+
+    100%{
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/***************************************************
+DESLIZAR ARRIBA
+****************************************************/
+
+@keyframes slideUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(80px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/***************************************************
+DESLIZAR DERECHA
+****************************************************/
+
+@keyframes slideRight{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-80px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/***************************************************
+DESLIZAR IZQUIERDA
+****************************************************/
+
+@keyframes slideLeft{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(80px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/***************************************************
+CONFETI
+****************************************************/
+
+@keyframes confetti{
+
+    0%{
+
+        transform:
+
+        translateY(-100px)
+
+        rotate(0deg);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:
+
+        translateY(120vh)
+
+        rotate(720deg);
+
+        opacity:0;
+
+    }
+
+}
+/*==================================================
+        APARICIÓN DE SECCIONES
+==================================================*/
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:
+
+        opacity .9s ease,
+
+        transform .9s ease;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/*************************************************
+RETRASOS
+*************************************************/
+
+.delay-1{
+
+    transition-delay:.15s;
+
+}
+
+.delay-2{
+
+    transition-delay:.30s;
+
+}
+
+.delay-3{
+
+    transition-delay:.45s;
+
+}
+
+.delay-4{
+
+    transition-delay:.60s;
+
+}
+
+.delay-5{
+
+    transition-delay:.75s;
+
+}
+
+/*************************************************
+BOTÓN DORADO
+*************************************************/
+
+.gold-button{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.gold-button::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.75),
+
+        transparent
+
+    );
+
+    transform:skewX(-25deg);
+
+}
+
+.gold-button:hover::before{
+
+    animation:buttonShine 1.2s;
+
+}
+
+@keyframes buttonShine{
+
+    from{
+
+        left:-120%;
+
+    }
+
+    to{
+
+        left:170%;
+
+    }
+
+}
+
+/*************************************************
+TARJETAS
+*************************************************/
+
+.info-card,
+
+.parents-card,
+
+.dress-card,
+
+.location-card,
+
+.confirmation-card{
+
+    transition:
+
+    transform .45s ease,
+
+    box-shadow .45s ease;
+
+}
+
+.info-card:hover,
+
+.parents-card:hover,
+
+.dress-card:hover,
+
+.location-card:hover,
+
+.confirmation-card:hover{
+
+    transform:
+
+    translateY(-8px)
+
+    scale(1.02);
+
+}
+
+/*************************************************
+ICONOS
+*************************************************/
+
+.icon-circle{
+
+    transition:.4s;
+
+}
+
+.info-card:hover .icon-circle{
+
+    transform:
+
+    rotate(10deg)
+
+    scale(1.08);
+
+}
+
+/*************************************************
+GALERÍA
+*************************************************/
+
+.gallery-item{
+
+    transition:
+
+    transform .45s,
+
+    filter .45s;
+
+}
+
+.gallery-item:hover{
+
+    transform:scale(1.04);
+
+    filter:brightness(1.08);
+
+}
+
+/*************************************************
+IMAGEN VIRGEN
+*************************************************/
+
+.virgen{
+
+    animation:
+
+    breathing 6s ease-in-out infinite,
+
+    glow 5s ease-in-out infinite;
+
+}
+
+/*************************************************
+FLORES
+*************************************************/
+
+.hero-decoration.left{
+
+    animation:
+
+    flowerLeft 12s ease-in-out infinite;
+
+}
+
+.hero-decoration.right{
+
+    animation:
+
+    flowerRight 11s ease-in-out infinite;
+
+}
+
+/*************************************************
+TÍTULOS
+*************************************************/
+
+.section-title{
+
+    animation:
+
+    fadeUp 1.2s ease both;
+
+}
+
+.hero-name{
+
+    animation:
+
+    zoomIn 1.5s ease both;
+
+}
+
+.hero-title{
+
+    animation:
+
+    fadeDown 1s ease both;
+
+}
+
+/*************************************************
+TEXTOS
+*************************************************/
+
+.section-description,
+
+.hero-message{
+
+    animation:
+
+    fadeUp 1.4s ease both;
+
+}
+
+/*************************************************
+CONTADOR
+*************************************************/
+
+.time-box{
+
+    animation:
+
+    float 5s ease-in-out infinite;
+
+}
+
+.time-box:nth-child(2){
+
+    animation-delay:.3s;
+
+}
+
+.time-box:nth-child(3){
+
+    animation-delay:.6s;
+
+}
+
+.time-box:nth-child(4){
+
+    animation-delay:.9s;
+
+}
+
+/*************************************************
+PALETA
+*************************************************/
+
+.color{
+
+    transition:.35s;
+
+}
+
+.color:hover{
+
+    transform:
+
+    scale(1.2)
+
+    rotate(15deg);
+
+}
+
+/*************************************************
+BOTÓN TOP
+*************************************************/
+
+#btnTop:hover{
+
+    transform:
+
+    translateY(-6px)
+
+    scale(1.08);
+
+}
+
+/*************************************************
+MÚSICA
+*************************************************/
+
+#musicButton:hover{
+
+    transform:scale(1.12);
+
+}
+
+#musicButton.playing{
+
+    animation:
+
+    rotateMusic 6s linear infinite;
+
+}
+
+/*************************************************
+LOADER
+*************************************************/
+
+#loader.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+}
+
+/*************************************************
+PROGRESO
+*************************************************/
+
+#progress{
+
+    transition:width .25s linear;
+
+}
+
+/*************************************************
+MODAL
+*************************************************/
+
+.modal.show{
+
+    display:flex;
+
+    animation:fadeIn .45s;
+
+}
+
+.modal-box{
+
+    animation:zoomIn .55s ease;
+
+}
+
+/*************************************************
+LIGHTBOX
+*************************************************/
+
+#lightbox.show{
+
+    display:flex;
+
+    animation:fadeIn .35s;
+
+}
+
+#lightbox img{
+
+    animation:zoomIn .45s ease;
+
+}
+
+/*************************************************
+PÉTALOS
+*************************************************/
+
+.petal{
+
+    position:fixed;
+
+    top:-80px;
+
+    pointer-events:none;
+
+    animation:
+
+    petalFall linear forwards;
+
+}
+
+/*************************************************
+DESTELLOS
+*************************************************/
+
+.spark{
+
+    position:fixed;
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#FFE6A8;
+
+    box-shadow:
+
+    0 0 10px #FFE6A8,
+
+    0 0 20px #FFF3D0,
+
+    0 0 35px #FFF9E8;
+
+    animation:
+
+    sparkle 2.5s linear infinite;
+
+}
+
+/*************************************************
+CONFETI
+*************************************************/
+
+.confetti{
+
+    position:fixed;
+
+    width:10px;
+
+    height:18px;
+
+    animation:
+
+    confetti linear forwards;
+
+}
+
+/*************************************************
+SCROLL SUAVE
+*************************************************/
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+/*************************************************
+FIN
+*************************************************/
+
+/*==========================================
+            BUTTERFLIES
+==========================================*/
+
+.butterflies{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:1;
+}
+
+.butterfly{
+    position:absolute;
+    width:35px;
+    opacity:.8;
+    animation:flap .5s ease-in-out infinite alternate;
+}
+
+.b1{
+
+    left:10%;
+    top:50%;
+    animation:fly1 18s linear infinite;
+
+}
+
+.b2{
+
+    left:35%;
+    top:80%;
+    animation:fly2 22s linear infinite;
+
+}
+
+.b3{
+
+    left:65%;
+    top:90%;
+    animation:fly3 20s linear infinite;
+
+}
+
+.b4{
+
+    left:85%;
+    top:60%;
+    animation:fly4 24s linear infinite;
+
+}
+@keyframes flap{
+
+    from{
+
+        transform:scaleX(1);
+
+    }
+
+    to{
+
+        transform:scaleX(.82);
+
+    }
+
+}
+
+@keyframes fly1{
+
+    from{
+
+        transform:
+        translate(0,0)
+        rotate(-8deg);
+
+    }
+
+    to{
+
+        transform:
+        translate(120px,-120vh)
+        rotate(15deg);
+
+    }
+
+}
+
+@keyframes fly2{
+
+    from{
+
+        transform:
+        translate(0,0)
+        rotate(5deg);
+
+    }
+
+    to{
+
+        transform:
+        translate(-100px,-120vh)
+        rotate(-20deg);
+
+    }
+
+}
+
+@keyframes fly3{
+
+    from{
+
+        transform:
+        translate(0,0)
+        rotate(-5deg);
+
+    }
+
+    to{
+
+        transform:
+        translate(160px,-120vh)
+        rotate(25deg);
+
+    }
+
+}
+
+@keyframes fly4{
+
+    from{
+
+        transform:
+        translate(0,0)
+        rotate(10deg);
+
+    }
+
+    to{
+
+        transform:
+        translate(-150px,-120vh)
+        rotate(-15deg);
+
+    }
+
+}
