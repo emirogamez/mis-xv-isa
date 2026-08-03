@@ -408,16 +408,3 @@ window.onload = function () {
     }, 4000);
 
 }
-
-
-window.addEventListener("load", () => {
-
-    setTimeout(() => {
-
-        document.getElementById("pantalla2").scrollIntoView({
-            behavior: "smooth"
-        });
-
-    }, 5000); // Espera 5 segundos
-
-});
