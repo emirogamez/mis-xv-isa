@@ -33,10 +33,6 @@ body::before{
 
     inset:0;
 
-    background:
-
-    url("../assets/img/fondo/paper.png");
-
     background-size:cover;
 
     opacity:.08;
