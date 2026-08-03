@@ -162,7 +162,31 @@ setTimeout(()=>{
 intro.style.display="none";
 
 contenido.style.display="block";
+setTimeout(() => {
 
+    let autoScroll = true;
+
+    // Si el usuario toca la pantalla o hace scroll,
+    // se detiene el desplazamiento automático.
+    const detener = () => autoScroll = false;
+
+    window.addEventListener("touchstart", detener, { once: true });
+    window.addEventListener("wheel", detener, { once: true });
+    window.addEventListener("mousedown", detener, { once: true });
+
+    function mover() {
+
+        if (!autoScroll) return;
+
+        window.scrollBy(0, 1);
+
+        requestAnimationFrame(mover);
+
+    }
+
+    mover();
+
+}, 3000);
 document.body.style.overflowY="auto";
 
 window.scrollTo({
