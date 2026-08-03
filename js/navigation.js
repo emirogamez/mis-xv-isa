@@ -157,66 +157,40 @@ intro.style.transform="scale(1.08)";
         MOSTRAR CONTENIDO
 ***********************************************/
 
-setTimeout(()=>{
+
 
 intro.style.display="none";
 
 contenido.style.display="block";
+
 setTimeout(() => {
 
     let autoScroll = true;
 
-    // Si el usuario toca la pantalla o hace scroll,
-    // se detiene el desplazamiento automático.
-    const detener = () => autoScroll = false;
-
-    window.addEventListener("touchstart", detener, { once: true });
-    window.addEventListener("wheel", detener, { once: true });
-    window.addEventListener("mousedown", detener, { once: true });
-
-    function mover() {
+    function scrollAutomatico() {
 
         if (!autoScroll) return;
 
-        window.scrollBy(0, 1);
+        document.documentElement.scrollTop += 1;
 
-        requestAnimationFrame(mover);
+        requestAnimationFrame(scrollAutomatico);
 
     }
 
-    mover();
+    requestAnimationFrame(scrollAutomatico);
+
+    // Si el usuario toca la pantalla se detiene
+    ["touchstart", "wheel", "mousedown"].forEach(evento => {
+
+        window.addEventListener(evento, () => {
+
+            autoScroll = false;
+
+        }, { once: true });
+
+    });
 
 }, 3000);
-document.body.style.overflowY="auto";
-
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
-
-contenido.animate(
-
-[
-{
-opacity:0,
-transform:"translateY(60px)"
-},
-{
-opacity:1,
-transform:"translateY(0)"
-}
-],
-
-{
-duration:1600,
-fill:"forwards"
-}
-
-);
-
-},4500);
-
-}
 
 /************************************************
      EFECTO BRILLO SELLO
