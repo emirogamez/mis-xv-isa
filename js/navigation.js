@@ -157,74 +157,66 @@ intro.style.transform="scale(1.08)";
         MOSTRAR CONTENIDO
 ***********************************************/
 
-setTimeout(()=>{
-
-intro.style.display="none";
-
-contenido.style.display="block";
-
-
 setTimeout(() => {
 
-    let autoScroll = true;
+    intro.style.display = "none";
 
-    function scrollAutomatico() {
+    contenido.style.display = "block";
 
-        if (!autoScroll) return;
+    document.body.style.overflowY = "auto";
 
-        document.documentElement.scrollTop += 1;
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+    contenido.animate(
+        [
+            {
+                opacity: 0,
+                transform: "translateY(60px)"
+            },
+            {
+                opacity: 1,
+                transform: "translateY(0)"
+            }
+        ],
+        {
+            duration: 1600,
+            fill: "forwards"
+        }
+    );
+
+    // ===== ESPERAR 3 SEGUNDOS Y EMPEZAR A BAJAR =====
+    setTimeout(() => {
+
+        let autoScroll = true;
+
+        function scrollAutomatico() {
+
+            if (!autoScroll) return;
+
+            document.documentElement.scrollTop += 1;
+
+            requestAnimationFrame(scrollAutomatico);
+
+        }
 
         requestAnimationFrame(scrollAutomatico);
 
-    }
+        ["touchstart", "wheel", "mousedown"].forEach(evento => {
 
-    requestAnimationFrame(scrollAutomatico);
+            window.addEventListener(evento, () => {
 
-    // Si el usuario toca la pantalla se detiene
-    ["touchstart", "wheel", "mousedown"].forEach(evento => {
+                autoScroll = false;
 
-        window.addEventListener(evento, () => {
+            }, { once: true });
 
-            autoScroll = false;
+        });
 
-        }, { once: true });
+    }, 3000);
 
-    });
-
-}, 3000);
-
-
-      
-document.body.style.overflowY="auto";
-
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
-
-contenido.animate(
-
-[
-{
-opacity:0,
-transform:"translateY(60px)"
-},
-{
-opacity:1,
-transform:"translateY(0)"
-}
-],
-
-{
-duration:1600,
-fill:"forwards"
-}
-
-);
-
-},4500);
-
-}
+}, 4500);
 
 /************************************************
      EFECTO BRILLO SELLO
