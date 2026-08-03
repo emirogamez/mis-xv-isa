@@ -157,7 +157,6 @@ intro.style.transform="scale(1.08)";
         MOSTRAR CONTENIDO
 ***********************************************/
 
-
 setTimeout(()=>{
 
 intro.style.display="none";
