@@ -13,7 +13,7 @@ CONFIGURACIÓN
 
 // Cambia este número por el tuyo.
 // Debe llevar el código del país sin el signo +
-const telefono = "573002406369";
+const telefono = "573243546801";
 
 /*************************************************
 ENVIAR
