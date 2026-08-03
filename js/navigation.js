@@ -168,25 +168,28 @@ setTimeout(() => {
 
     let autoScroll = true;
 
-    // Si el usuario toca la pantalla o hace scroll,
-    // se detiene el desplazamiento automático.
-    const detener = () => autoScroll = false;
-
-    window.addEventListener("touchstart", detener, { once: true });
-    window.addEventListener("wheel", detener, { once: true });
-    window.addEventListener("mousedown", detener, { once: true });
-
-    function mover() {
+    function scrollAutomatico() {
 
         if (!autoScroll) return;
 
-        window.scrollBy(0, 1);
+        document.documentElement.scrollTop += 1;
 
-        requestAnimationFrame(mover);
+        requestAnimationFrame(scrollAutomatico);
 
     }
 
-    mover();
+    requestAnimationFrame(scrollAutomatico);
+
+    // Si el usuario toca la pantalla se detiene
+    ["touchstart", "wheel", "mousedown"].forEach(evento => {
+
+        window.addEventListener(evento, () => {
+
+            autoScroll = false;
+
+        }, { once: true });
+
+    });
 
 }, 3000);
 
