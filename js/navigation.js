@@ -157,66 +157,43 @@ intro.style.transform="scale(1.08)";
         MOSTRAR CONTENIDO
 ***********************************************/
 
-setTimeout(() => {
+setTimeout(()=>{
 
-    intro.style.display = "none";
+intro.style.display="none";
 
-    contenido.style.display = "block";
+contenido.style.display="block";
 
-    document.body.style.overflowY = "auto";
+document.body.style.overflowY="auto";
 
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
 
-    contenido.animate(
-        [
-            {
-                opacity: 0,
-                transform: "translateY(60px)"
-            },
-            {
-                opacity: 1,
-                transform: "translateY(0)"
-            }
-        ],
-        {
-            duration: 1600,
-            fill: "forwards"
-        }
-    );
+contenido.animate(
 
-    // ===== ESPERAR 3 SEGUNDOS Y EMPEZAR A BAJAR =====
-    setTimeout(() => {
+[
+{
+opacity:0,
+transform:"translateY(60px)"
+},
+{
+opacity:1,
+transform:"translateY(0)"
+}
+],
 
-        let autoScroll = true;
+{
+duration:1600,
+fill:"forwards"
+}
 
-        function scrollAutomatico() {
+);
 
-            if (!autoScroll) return;
+},4500);
 
-            document.documentElement.scrollTop += 1;
+}
 
-            requestAnimationFrame(scrollAutomatico);
-
-        }
-
-        requestAnimationFrame(scrollAutomatico);
-
-        ["touchstart", "wheel", "mousedown"].forEach(evento => {
-
-            window.addEventListener(evento, () => {
-
-                autoScroll = false;
-
-            }, { once: true });
-
-        });
-
-    }, 8000);
-
-}, 4500);
 
 /************************************************
      EFECTO BRILLO SELLO
