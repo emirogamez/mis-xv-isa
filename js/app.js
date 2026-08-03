@@ -379,3 +379,32 @@ window.scrollTo(0,0);
 };
 
 });
+window.addEventListener("load", () => {
+
+    setTimeout(() => {
+
+        let velocidad = 0.8;
+
+        setInterval(() => {
+            window.scrollBy(0, velocidad);
+        }, 16);
+
+    }, 4000);
+
+});
+
+window.onload = function () {
+
+    // Tu código...
+
+    setTimeout(() => {
+
+        let velocidad = 0.8;
+
+        setInterval(() => {
+            window.scrollBy(0, velocidad);
+        }, 16);
+
+    }, 4000);
+
+}
