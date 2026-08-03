@@ -158,12 +158,12 @@ intro.style.transform="scale(1.08)";
 ***********************************************/
 
 
-
+setTimeout(() => {
 intro.style.display="none";
 
 contenido.style.display="block";
 
-setTimeout(() => {
+
 
     let autoScroll = true;
 
