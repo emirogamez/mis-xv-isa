@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded",()=>{
 
-const evento=new Date("September 4, 2026 19:00:00").getTime();
+const evento=new Date("September 4, 2026 18:00:00").getTime();
 
 const dias=document.getElementById("days");
 const horas=document.getElementById("hours");
